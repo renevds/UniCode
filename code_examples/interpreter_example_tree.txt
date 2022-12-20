@@ -1,0 +1,12 @@
+Scope
+    | Seq
+        | Function "test" ["n"]
+            | Scope
+                | Return
+                    | :+:
+                        | ReadVar n
+                        | Lit 1
+        | Print
+            | Call "test" [Lit 1]
+
+

@@ -1,0 +1,13 @@
+integer operators: + - * / %
+boolean operators: ¬ ∧ ∨ ⟺ > < ≥ ≤ ≠
+if: ?
+else: ¿
+while: 🔁
+assign: =
+function: ⎔
+increment: ++
+print: 📺
+return: ⮑
+engine prefix: 🎮
+
+

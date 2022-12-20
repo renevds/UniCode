@@ -1,0 +1,31 @@
+createGame
+startGame
+removeGoodBadOverlap
+resetGame
+boundPlayerToMap
+
+moveInDirection(PLAYER/GOOD/BAD)
+bind(LEFT/RIGHT/UP/DOWN/SPACE, ⎔())
+placeRandom(GOOD/BAD)
+clear(GOOD/BAD)
+addTo(GOOD/BAD, PLAYER)
+addTo(GOOD/BAD, x, y)
+setDirection(N/E/S/W)
+removeLast(GOOD/BAD)
+showScoreScreen(score)
+setColor(PLAYER/GOOD/BAD, r, g, b)
+setColor(PLAYER/GOOD/BAD, r, g, b, a)
+removeDuplicates(GOOD/BAD)
+parseAddRandomBadToRow(row)
+removeOfMap(GOOD/BAD)
+forEach(GOOD/BAD, ⎔(x, y))
+
+amountOf(GOOD/BAD)
+playerOverlapWith(GOOD/BAD)
+playerOnMap
+getPlayerX
+getPlayerY
+getMaxX
+getMaxY
+
+

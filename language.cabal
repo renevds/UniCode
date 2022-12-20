@@ -1,0 +1,23 @@
+cabal-version: 2.2
+name: language
+version: 0.0.1
+extra-source-files: verslag.txt
+
+library
+  hs-source-dirs: lib
+  default-language: Haskell2010
+  build-depends: base >= 4.14.3.0 && < 4.15
+               , gloss >= 1.13.2.1 && < 1.14
+               , containers >= 0.6.5.1
+               , random >= 1.2.0 && < 1.3
+  exposed-modules: Parser, Interpreter, Store, GameEngine, GameGraphics
+
+executable language
+  main-is: Main.hs
+  hs-source-dirs: src
+  default-language: Haskell2010
+  build-depends: base >= 4.14.3.0 && < 4.15 
+               , gloss >= 1.13.2.1 && < 1.14
+               , containers >= 0.6.5.1
+               , random >= 1.2.0 && < 1.3
+               , language

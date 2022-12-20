@@ -1,0 +1,65 @@
+{
+    difficulty = 4;
+    score = 0;
+
+   ⎔ shooterStep(){
+        🎮setDirection(N);
+        🎮moveInDirection(GOOD);
+        🎮removeGoodBadOverlap;
+        🎮setDirection(S);
+        🎮moveInDirection(BAD);
+        🎮removeGoodBadOverlap;
+
+        i = 0;
+        🔁((i < difficulty)){
+            🎮addRandomBadToRow(🎮getMaxY);
+            🎮removeDuplicates(BAD);
+            i++;
+        };
+
+        score++;
+
+        🎮removeOfMap(GOOD);
+        🎮forEach(BAD, checkBad);
+   };
+
+    ⎔ checkBad(x, y){
+        ?((y ⟺ 0)){
+            🎮showScoreScreen(score);
+        };
+    };
+
+   ⎔ handleRight(){
+        🎮setDirection(E);
+        🎮moveInDirection(PLAYER);
+        🎮boundPlayerToMap;
+   };
+
+   ⎔ handleLeft(){
+        🎮setDirection(W);
+        🎮moveInDirection(PLAYER);
+        🎮boundPlayerToMap;
+   };
+
+   ⎔ handleUp(){
+        🎮addTo(GOOD, 🎮getPlayerX, (🎮getPlayerY + 1));
+        🎮removeDuplicates(GOOD);
+   };
+
+   ⎔ resetGame(){
+      🎮resetGame;
+   };
+
+   🎮createGame(shooterStep);
+
+   🎮setColor(PLAYER, 0, 0, 255);
+   🎮setColor(BAD, 0, 255, 0);
+   🎮setColor(GOOD, 0, 0, 255, 125);
+
+   🎮bind(RIGHT, handleRight);
+   🎮bind(LEFT, handleLeft);
+   🎮bind(UP, handleUp);
+   🎮bind(SPACE, resetGame);
+
+   🎮startGame(1);
+}
